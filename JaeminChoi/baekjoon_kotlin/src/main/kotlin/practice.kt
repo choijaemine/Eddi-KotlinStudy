@@ -66,3 +66,13 @@ fun practice4() = with(Scanner(System.`in`)) {
         else -> println("^^")
     }
 }
+
+fun main() = with(Scanner(System.`in`)){
+    val a = nextInt()
+    val b = nextInt()
+    val c = nextInt()
+
+    if(c - b <= 0) print("-1")
+    else print((a / (c - b)) + 1)
+}
+

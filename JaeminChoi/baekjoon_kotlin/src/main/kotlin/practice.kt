@@ -1,3 +1,6 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.lang.Math.min
 import java.util.Scanner
 
 fun practice1() = with(Scanner(System.`in`)){
@@ -67,7 +70,7 @@ fun practice4() = with(Scanner(System.`in`)) {
     }
 }
 
-fun main() = with(Scanner(System.`in`)){
+fun practice5() = with(Scanner(System.`in`)){
     val a = nextInt()
     val b = nextInt()
     val c = nextInt()
@@ -76,3 +79,59 @@ fun main() = with(Scanner(System.`in`)){
     else print((a / (c - b)) + 1)
 }
 
+fun practice6() = with(Scanner(System.`in`)){
+    val A = nextInt()
+    val B = nextInt()
+    val V = nextInt()
+    var range = 0
+    var day = 1
+
+    while(true){
+        range += A
+        if(range >= V){
+            break
+        }
+        range -= B
+        ++day
+    }
+    print(day)
+}
+
+class Solution {
+    fun practice7(s: String): String {
+        val strList = s.split(" ").map { it.toInt() }.sortedBy { it }
+        var max = strList.first()
+        var min = strList.last()
+        return  "$max $min"
+    }
+}
+
+fun practice8() = with(Scanner(System.`in`)){
+    val n = nextInt()
+    var count =1
+    var range =2
+
+    if(n == 1){
+        print(count)
+    }else{
+        while(range <= n){
+            range = range + (6 * count)
+            count++
+        }
+        print(count)
+    }
+
+}
+
+fun main() = with (BufferedReader(InputStreamReader(System.`in`))) {
+    var case = 0
+    while (true){
+        case++
+        val (L,P,V) = (readLine().split(" ")).map { it.toInt() }
+        if(L == 0 && P ==0 && V == 0){break}
+        print( "${((V/P)* L)}")
+        print("case $case : ${((V/P)* L) + V%P}")
+    }
+
+
+}

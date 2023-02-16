@@ -123,7 +123,7 @@ fun practice8() = with(Scanner(System.`in`)){
 
 }
 
-fun main() = with (BufferedReader(InputStreamReader(System.`in`))) {
+fun practice9() = with (BufferedReader(InputStreamReader(System.`in`))) {
     var case = 0
     while (true){
         case++
@@ -135,3 +135,14 @@ fun main() = with (BufferedReader(InputStreamReader(System.`in`))) {
 
 
 }
+
+fun practice10() = with(Scanner(System.`in`)){
+    // S - 가위 P - 보, R - 바위
+    val roundCnt = nextInt()
+    val hand : Array<String>;
+
+    val friendCnt = nextInt()
+
+
+}
+
